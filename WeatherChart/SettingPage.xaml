@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="WeatherChart.SettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WeatherChart"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" x:Name="titleOnlyBar" Visibility="Visible" >
+            <Border Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" Height="48">
+                <TextBlock Text="設定" Style="{ThemeResource PageTitleTextBlockStyle}" TextWrapping="NoWrap"/>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" 
+                          HorizontalScrollBarVisibility="Auto" 
+                          PointerReleased="ScrollViewer_PointerReleased">
+                <StackPanel Padding="16">
+                    <TextBlock FontSize="24" Margin="0,0,0,8">表示設定</TextBlock>
+                    <CheckBox IsChecked="{Binding UseColorChart, Mode=TwoWay}">天気図をカラーで表示する</CheckBox>
+
+                    <TextBlock FontSize="24" Margin="0,24,8,0">バージョン情報</TextBlock>
+                    <TextBlock x:Name="VersionInfo" Text="{Binding VersionInfo}" />
+                    <TextBlock>(c) 2016 PORING SOFT</TextBlock>
+
+                    <HyperlinkButton Margin="0,8,0,0" Content="サポートサイト" NavigateUri="http://www.poringsoft.net/weatherchart/"/>
+                    <HyperlinkButton Content="プライバシーポリシー" NavigateUri="http://www.poringsoft.net/weatherchart/privacy/"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

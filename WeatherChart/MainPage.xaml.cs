@@ -159,7 +159,7 @@ namespace WeatherChart
         /// <param name="e"></param>
         private void SettingButton_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof(SettingPage));
+            this.Frame.Navigate(typeof(SettingPage));
         }
 
         /// <summary>
