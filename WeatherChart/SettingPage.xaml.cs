@@ -22,7 +22,6 @@ namespace WeatherChart
     /// </summary>
     public sealed partial class SettingPage : Page
     {
-
         /// <summary>
         /// ビューモデル
         /// </summary>

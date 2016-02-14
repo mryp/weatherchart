@@ -9,6 +9,9 @@ using Windows.ApplicationModel;
 
 namespace WeatherChart
 {
+    /// <summary>
+    /// 設定画面用のヴューモデルクラス
+    /// </summary>
     public class SettingPageModelView : INotifyPropertyChanged
     {
         private bool m_useColor = true;
