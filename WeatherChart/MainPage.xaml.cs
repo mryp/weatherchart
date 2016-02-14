@@ -171,7 +171,7 @@ namespace WeatherChart
         {
             if (ViewModel.ItemList.Count > 0)
             {
-                //this.Frame.Navigate(typeof(CreateTilePage), ViewModel.ItemList[0].ImageUrl);
+                this.Frame.Navigate(typeof(CreateTilePage), ViewModel.ItemList[0].ImageUrl);
             }
         }
 

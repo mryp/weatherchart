@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChartImageItem.cs" />
+    <Compile Include="LiveTileUpdateTask.cs" />
     <Compile Include="WeatherChartDataTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
